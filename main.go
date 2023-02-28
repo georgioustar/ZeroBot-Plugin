@@ -114,7 +114,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/nihongo"          // 日语语法学习
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/novel"            // 铅笔小说网搜索
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/nsfw"             // nsfw图片识别
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/omikuji"          // 浅草寺求签
+	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/omikuji"          // 求签
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/qqwife"           // 一群一天一夫一妻制群老婆
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/quan"             // QQ权重查询
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/qzone"            // qq空间表白墙
@@ -210,7 +210,7 @@ func init() {
 	// 直接写死 URL 时，请更改下面第二个参数
 	url := flag.String("u", "ws://127.0.0.1:6700", "Set Url of WSClient.")
 	// 默认昵称
-	adana := flag.String("n", "巴麻美", "Set default nickname.")
+	adana := flag.String("n", "卷卷", "Set default nickname.")
 	prefix := flag.String("p", "/", "Set command prefix.")
 	runcfg := flag.String("c", "", "Run from config file.")
 	save := flag.String("s", "", "Save default config to file and exit.")
@@ -242,8 +242,8 @@ func init() {
 	}
 
 	// 通过代码写死的方式添加主人账号
-	sus = append(sus,3552688643)
-	// sus = append(sus, 819591134)
+	sus = append(sus,738483470)
+	// sus = append(sus, 3552688643)
 
 	if *runcfg != "" {
 		f, err := os.Open(*runcfg)
@@ -268,7 +268,7 @@ func init() {
 	}
 	config.W = []*driver.WSClient{driver.NewWebSocketClient(*url, *token)}
 	config.Z = zero.Config{
-		NickName:       append([]string{*adana}, "金钻头", "麻美桑", "学姐", "前辈"),
+		NickName:       append([]string{*adana}, "小卷", "阿兴", "阿旺", "小狗", "母狗"),
 		CommandPrefix:  *prefix,
 		SuperUsers:     sus,
 		RingLen:        *rsz,
